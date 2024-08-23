@@ -22,9 +22,7 @@ describe("calaculator tests", ()=>{
 });
 ```
 
-
-
-### Using Mock DOM 
+## Using Mock DOM 
 
 Create a DOM that can be used to run the test on 
 
