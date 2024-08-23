@@ -21,3 +21,26 @@ describe("calaculator tests", ()=>{
     });
 });
 ```
+
+
+
+### Using Mock DOM 
+
+Create a DOM that can be used to run the test on 
+
+``` javascript
+beforeEach(() => {
+    document.body.innerHTML = "<p id='par'></p>";
+});
+```
+
+Test a function to se changes on Mock DOM 
+
+``` javascript
+describe("DOM tests", () =>{
+    test("expect p content to change", ()=>{
+        buttonClick();
+        expect(document.getElementById("par").innerHTML).toEqual("You Clicked");
+    });
+});
+```
