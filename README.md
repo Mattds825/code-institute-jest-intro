@@ -44,3 +44,20 @@ describe("DOM tests", () =>{
     });
 });
 ```
+
+### Adding the HTML file to check more than one element
+
+If you want ot add the entire contents of an existing html file, 
+and not have to keep up with changes you must do the following:
+
+``` javascript
+beforeEach(()=>{
+    let fs = require("fs"); // Load the File System to execute our tests part of NodeJS
+    let fileContents = fs.readFileSync("index.html", "utf-8"); // Load the contents of the file
+    
+    document.open(); // Open a new document
+    document.write(fileContents); // Write the contents of the file
+    document.close(); // Close the document
+
+});
+```
